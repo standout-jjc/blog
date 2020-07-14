@@ -1,0 +1,532 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 夏阳BLOG
+subtitle: 
+description: 
+keywords: xiayang,xiayang blog,夏阳,夏阳BLOG
+author: xiayang
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# Menu
+menu:
+  home: / || fas fa-home
+  archives: /archives/ || fas fa-folder-open
+  categories: /categories/ || fas fa-layer-group
+  tags: /tags/ || fas fa-tags
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://blog.xiayang.space
+root: /
+permalink: :title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: post # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: 2
+  wrap: true
+  hljs: true
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: 未分类
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: false
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+search:
+  path: search.json
+  field: post
+  content: true
+
+feed:
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 10
+  hub:
+  content:
+  content_limit: 300
+  content_limit_delim: " "
+  order_by: -date
+  icon: /images/logo.png
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+# theme: landscape
+theme: stun
+theme_config:
+  menu_settings:
+    # 是否只显示图标
+    icon_only: true
+    # 是否只显示文字
+    # text_only: true
+
+  favicon:
+    small: /images/favicon-16x16.png
+    medium: /images/favicon-32x32.png
+    # ! --------------------------------------------------
+    # ! If you don't know the following, please ignore it.
+    # ! --------------------------------------------------
+    # apple_touch_icon: /images/icons/apple-touch-icon.png
+    # safari_pinned_tab: /images/icons/stun-logo.svg
+    # msapplication: /images/icons/favicon-144x144.png
+
+  local_search:
+    # 是否启用
+    enable: true
+  
+  math:
+    # 是否启用
+    enable: true
+    # 如果设为 true，将会为每一个页面启用该功能
+    # 如果设为 false，只有在 `Front-matter` 中设置了 `math: true` 的页面，才会启用该功能
+    per_page: false
+    # 解析引擎，可选值：mathjax 或 katex
+    engine: katex
+
+  creative_commons:
+    enable: true
+    # 可选值: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND
+    # 详情请访问: https://creativecommons.org/share-your-work/licensing-types-examples/
+    license: BY-NC-ND
+    # 是否在侧边栏中显示
+    sidebar: false
+    # 是否在文章底部显示
+    post: true
+    # 可选值：
+    #   id | ms | ca | da | de | en | es | es_ES | eo | eu | fr | gl | hr
+    #   it | lv | lt | hu | nl | no | pt | pt_BR | pl | ro | sl | fi | sv
+    #   tr | is | cs | el | be | ru | zh | zh_TW | uk | ar | fa | bn | ja | ko
+    # 不设置默认为：en（当用户查看许可协议时，会以你设置的语言进行显示）
+    language: zh
+
+  night_mode:
+    enable: true
+    # 切换夜晚模式的按钮
+    button:
+      # 按钮块的颜色（请使用引号包裹值）
+      color: "#fafafa"
+      # 按钮的背景颜色（请使用引号包裹值）
+      bg_color: "#8c8a8a"
+    # 代表白天和夜晚的图标（目前仅支持文本和 emoji）
+    icon:
+      dark: 🌕
+      light: 🌑
+
+  header:
+    enable: true
+    show_on:
+      # 在文章页面是否显示网站顶部
+      post: true
+    # 网站顶部的高度（设置为百分数，表示所占屏幕高度的百分比。支持所有 CSS 长度单位）
+    height: 100%
+    # 顶部背景图片
+    bg_image:
+      enable: true
+      # 填写图片路径或链接
+      url: "https://source.unsplash.com/daily?technology"
+    # 顶部背景图的遮罩效果
+    mask:
+      enable: true
+      # 透明度（取值：0 ~ 1）
+      opacity: 0.5
+    nav:
+      # 顶部导航栏的高度（支持所有 CSS 长度单位）
+      height: 50px
+      # 导航栏的背景颜色（吸顶时）
+      bg_color: "#333"
+    # 提示向下滚动的图标
+    scroll_down_icon:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      name: fas fa-angle-down
+      # 是否启用动画
+      animation: true
+
+  sidebar:
+    enable: true
+    # 侧边栏位置，可选值有：left 或 right
+    position: left
+    # 侧边栏吸顶时，距离页面顶部的距离（只支持 px 单位）
+    offsetTop: 20px
+    # 是否显示水平分割线
+    horizon_line: true
+
+  author:
+    enable: true
+    # 侧边栏头像
+    avatar:
+      # 填写图片路径或链接
+      url: /images/logo.png
+      # 是否显示为圆形
+      rounded: true
+      # 头像透明度（取值：0 ~ 1）
+      opacity: 0.8
+      # 鼠标经过时的动画，可选值：turn 或 shake
+      animation: shake
+    # 格言（可以是任意一句想写的话）
+    motto: "为毛我名叫酱油"
+  
+  social:
+    github: https://github.com/standout-jjc || fab fa-github
+    google: 
+    twitter: 
+    youtube: 
+  
+  social_setting:
+    # 是否启用社交链接
+    enable: true
+    # 是否只显示图标
+    icon_only: false
+
+  toc:
+    enable: true
+    # 是否自动添加列表序号
+    list_number: true
+    # 是否文本溢出时换行
+    wrap: true
+    # 是否始终展开所有文章目录
+    # true ：始终展开
+    # false：默认折叠，滚动到对应位置时自动展开
+    expand_all: false
+    # 生成目录时，解析 `<h1~6>` 的最小深度
+    # 你可以在 Front-Matter 中，通过添加 `toc_min_depth` 属性，来为某篇文章指定该配置
+    min_depth: 1
+    # 生成目录时，解析 `<h1~6>` 的最大深度
+    # 你可以在 Front-Matter 中，通过添加 `toc_max_depth` 属性，来为某篇文章指定该配置
+    max_depth: 6
+
+  reading_progress:
+    enable: true
+    # 请使用引号包裹值（支持所有 CSS 颜色单位）
+    color: "#fc6423"
+    # 进度条高度（支持所有 CSS 长度单位）
+    height: 1px
+
+  feed:
+    enable: false
+    # 邮件订阅地址 (例如：http://eepurl.com/guAE6j)
+    email:
+    # RSS 订阅地址 (例如：/atom.xml)
+    rss: 
+    
+  back2top:
+    enable: true
+    # 显示的图标
+    icon:
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      name: fas fa-rocket
+      # 火箭发射动画
+      animation: true
+      # 图标的旋转角度（角度的单位是：deg）
+      rotate: -45deg
+      # 请使用引号包裹值（支持所有 CSS 颜色单位）
+      color: "#49b1f5"
+      hover_color: "#fc6423"
+
+  footer:
+    # 背景图片
+    bg_image:
+      enable: false
+      # 填写图片路径或链接
+      url:
+    # 遮罩效果
+    mask:
+      enable: false
+      # 遮罩透明度 (取值: 0 ~ 1).
+      opacity: 0.1
+    # 版权信息
+    copyright:
+      enable: true
+      # 显示的文字信息，例如：xxx All Rights Reserved
+      # 如果不设置，将显示 Hexo 配置文件中 author 项的内容
+      text: XIAYANG. All Rights Reserved
+      # 开始时间（如果不设置，将使用最新的年份）
+      since: 2020
+      # 结束时间（如果不设置，将使用最新的年份）
+      end:
+    # 日期和版权之间的图标
+    icon:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      name: fas fa-heart
+      # 心跳动画
+      animation: true
+      # 请使用包裹值（支持所有 CSS 颜色单位）
+      color: "#ff0000"
+    # Hexo 链接（Powered by Hexo）
+    powered:
+      enable: false
+      # 显示版本号（例如：vX.X.X）
+      version: false
+    # 主题链接（Theme - Stun）
+    theme:
+      enable: false
+      # 显示版本号（例如：vX.X.X）
+      version: false
+    # 备案信息（只有中国开发者会用到）详情: http://www.miitbeian.gov.cn/
+    beian:
+      enable: true
+      # 备案 XXXXXXXX 号
+      icp: 鲁ICP备20012782号-1
+    # 任何自定义文本，支持 HTML（例如：托管于 <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a>）
+    custom:
+      enable: false
+      # 自定义文本内容
+      text:
+  
+  post_meta:
+    # 是否只显示图标
+    icon_only: true
+    # 文章创建时间
+    created:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      icon: far fa-calendar-plus
+    # 文章更新时间
+    updated:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      icon: far fa-calendar-check
+    # 文章预计的阅读时间
+    # 启用这个功能之前，你首先需要在 Hexo 根目录安装依赖：
+    # `npm install hexo-wordcount --save`，然后重启 hexo 服务器
+    reading_time:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      icon: far fa-clock
+      # 设置文章的阅读速度（阅读时间会根据这个设置来计算）
+      speed:
+        # 中文的阅读速度
+        zh: 200
+        # 英文的阅读速度
+        en: 80
+    # 文章字数统计
+    # 启用这个功能之前，你首先需要在 Hexo 根目录安装依赖：
+    # `npm install hexo-wordcount --save`，然后重启 hexo 服务器
+    word_count:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      icon: far fa-file-word    
+
+  post_list:
+    # 文章列表里的文章的封面图片
+    cover_image:
+      home: false
+  
+  post_widget:
+    # 是否在文章末尾显示文章标签
+    tags: true
+  
+  codeblock:
+    # 设置代码块样式
+    style: simple
+    # 设置代码高亮
+    highlight: ocean
+    # 代码溢出是否换行
+    word_wrap: true
+
+  gallery_waterfall:
+    enable: true
+    # 瀑布流中每一列的宽度
+    col_width: 220px
+    # 图片之间的水平间隙
+    gap_x: 10px
+    # 图片之间的垂直间隙
+    gap_y: 10px  
+  
+  fancybox: true
+
+  lazyload:
+    enable: true
+    # 图片未加载前的占位符。可选值有：gif 或 block
+    placeholder: block
+
+  tag_cloud:
+    # 请使用引号包裹颜色值（只支持十六进制的颜色值）
+    start_color: "#a4d8fa"
+    end_color: "#49b1f5"
+    # 标签最大、最小的尺寸（例如：设置为 20 表示 字体大小 20px）
+    min_size: 16
+    max_size: 26
+    # 最大显示标签数量
+    max_amount: 200
+  
+  external_link:
+    icon:
+      enable: true
+      # 查找图标名称，请访问：https://fontawesome.com/icons
+      name: fas fa-external-link-alt
+      # 请使用引号包裹值（支持所有 CSS 颜色单位）
+      color: "#aaa"
+
+  quicklink:
+    # 是否启用。这里启用之后并不会对所有页面生效，你还需要进行下面的设置
+    enable: false
+    # 设置 home 页面和 archive 页面是否启用
+    home: true
+    archive: true
+    # 当浏览器 DOMContentLoaded 事件触发后，开始初始化 quicklink
+    delay: true
+    # requestIdleCallback 超时时间（浏览器执行预取的时间（以毫秒为单位））
+    timeout: 10000
+    # 启用 fetch() 或回退到 XHR
+    priority: true
+    # 设置忽略预取的链接类型
+    # ！！如果你不了解如何使用，请忽略这一项（默认即可）！！
+    ignores:
+      - /\/api\/?/
+      - uri => uri.includes('.xml')
+      - uri => uri.includes('.zip')
+      - (uri, el) => el.hasAttribute('nofollow')
+      - (uri, el) => el.hasAttribute('noprefetch')
+    
+  pjax:
+    enable: true
+    # 是否在切换页面时，滚动到顶部大图的底部
+    avoid_banner: true
+    # ！！如果你不了解如何使用，请忽略下面的配置项（默认即可）！！
+    # 下面配置项的用法，请参见: https://github.com/MoOx/pjax/#options
+    elements:
+    selectors:
+    switches:
+    switchesOptions:
+    history: true
+    # 如果启用这个配置项，必须设置 `avoid_banner: false`
+    scrollTo: false
+    scrollRestoration: false
+    cacheBust: false
+    debug: false
+    currentUrlFullReload: false
+    timeout: 0
+
+  utterances:
+    # 是否启用
+    enable: true
+    # Github 用户名
+    owner: standout-jjc
+    # Github 仓库名（需要是公开的仓库）
+    repo: blog
+    # 选择 GitHub issues 和博客文章之间的映射关系
+    # 可选值: pathname | url | title | og:title
+    #   pathname: 使用博客 URL 中的 pathname 来新建 issues
+    #        url: 使用博客的 URL 来新建 issues
+    #      title: 使用博客的标题来新建 issues
+    #   og:title: 使用页面中的 Open Graph title meta 来新建 issues（如果你不了解 Open Graph 协议，请查看：https://ogp.me/）
+    # （确保博客文章的 url path、url、标题、og:title 不重复，否则评论可能会冲突）
+    mapping: title
+    # 选择 Utterances 创建 issues 时，使用的 label 名称（支持 Emoji）
+    label: comment
+    # 选择 Utterances 评论的主题配色
+    # 可选值: github-light | github-dark | github-dark-orange | icy-dark | dark-blue | photon-dark
+    theme: github-light
+    # ! --------------------------------------------------------------------------------
+    # ! Utterances 依赖的脚本地址，不要随意修改。如果官网提供的地址和下面不同，你才需要手动设置
+    # ! --------------------------------------------------------------------------------
+    script_url: https://utteranc.es/client.js
+  
+  baidu_analytics: dc29ed24a5dd9a4645e8943672ab426b
+  baidu_site_verification: PM3H6iN1jS
+
+  canvas_nest:
+    # 是否启用
+    enable: false
+    # 线条的颜色（RGB 值，请使用 "," 分隔，并用引号包裹值）
+    color: "0,0,0"
+    # 线条的透明度
+    opacity: 0.6
+    # 线条数目
+    count: 99
+    # 效果的层级
+    zIndex: -1
+
+  canvas_ribbon:
+    # 是否启用
+    enable: true
+    # ribbon 的宽度
+    size: 300
+    # ribbon 的透明度
+    alpha: 0.6
+    # ribbon 的层级
+    zIndex: -1
+
+all_minifier: true
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  - type: sftp
+    host: xiayang.space
+    user: jiajianchang
+    pass: 
+    remotePath: /data/sftp/jiajianchang/blog
+    port: 9522
+    privateKey: /Users/jiajianchang/.ssh/id_rsa
