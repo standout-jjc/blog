@@ -1,9 +1,8 @@
 ---
-title: code-snippets_equals-version
+title: TS比较版本号大小算法
 toc: true
 comments: true
 date: 2020-07-14 10:41:12
-excerpt: "TS比较版本号大小算法"
 categories:
   - [code snippets]
 tags:
@@ -11,9 +10,7 @@ tags:
   - TypeScript
 ---
 
-## TS比较版本号大小算法 ##
-
-### 使用递归判断版本号大小 ###
+## 使用递归判断版本号大小 ##
 
 ``` typescript
 function equalsVersion(curVersion: string, minVersion: string): boolean {
