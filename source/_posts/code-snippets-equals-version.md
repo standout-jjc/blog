@@ -1,12 +1,12 @@
 ---
-title: TS比较版本号大小算法
+title: 算法片段-TS比较版本号大小算法
 toc: true
 comments: true
 date: 2020-07-14 10:41:12
 categories:
-  - [code snippets]
+  - 算法片段
 tags:
-  - [code snippets]
+  - 算法片段
   - TypeScript
 ---
 
