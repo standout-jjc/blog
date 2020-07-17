@@ -256,7 +256,7 @@ theme_config:
     # 是否始终展开所有文章目录
     # true ：始终展开
     # false：默认折叠，滚动到对应位置时自动展开
-    expand_all: false
+    expand_all: true
     # 生成目录时，解析 `<h1~6>` 的最小深度
     # 你可以在 Front-Matter 中，通过添加 `toc_min_depth` 属性，来为某篇文章指定该配置
     min_depth: 1
@@ -392,7 +392,7 @@ theme_config:
     # 设置代码高亮
     highlight: light
     # 代码溢出是否换行
-    word_wrap: true
+    word_wrap: false
 
   gallery_waterfall:
     enable: true
