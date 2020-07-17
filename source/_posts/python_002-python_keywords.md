@@ -2,10 +2,11 @@
 title: "Python第二弹  Python关键字和操作符"
 toc: true
 comments: true
-date: 2020-07-16 20:45:16
+date: 2020-07-16 21:45:16
 categories:
   - "Programming Language"
 tags:
+  - "Programming Language"
   - Python
 top_image:
 photos:
@@ -18,7 +19,19 @@ photos:
 >>>import keyword
 >>>keyword.kwlist
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from','global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+>>> assert 1+1 == 2
+>>> assert 1+1 == 3
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AssertionError
+
+>>> (lambda x,y,z : (x + y) * z )(1,2,3)
+9
+
+
 ```
+
 ## Python的操作符 ##
 
 ``` python
